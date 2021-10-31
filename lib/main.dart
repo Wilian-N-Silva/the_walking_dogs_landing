@@ -1,7 +1,10 @@
 import 'dart:math';
 
 import 'package:flutter/material.dart';
-import 'package:the_walking_dogs_landing/responsive.dart';
+import 'package:the_walking_dogs_landing/helpers/responsive.dart';
+import 'package:the_walking_dogs_landing/ui/breakpoints/desktop.dart';
+import 'package:the_walking_dogs_landing/ui/breakpoints/mobile.dart';
+import 'package:the_walking_dogs_landing/ui/breakpoints/tablet.dart';
 
 void main() {
   runApp(const Application());
@@ -34,48 +37,17 @@ class _LandingState extends State<Landing> {
     Random().nextInt(100) < 50
         ? 'assets/images/blue/adopt_a_pet_bro.png'
         : 'assets/images/blue/animal_shelter_bro.png',
+    height: 500.0,
+    fit: BoxFit.cover,
   );
-
-  _desktop(Size size, image) {
-    return Row(
-      children: [
-        Expanded(
-          flex: 1,
-          child: Center(
-            child: image,
-          ),
-        ),
-        Expanded(
-          flex: 2,
-          child: SingleChildScrollView(
-            child: Column(
-              mainAxisAlignment: MainAxisAlignment.start,
-              children: [
-                Text(
-                  'The Walking Pets',
-                  style: Theme.of(context).textTheme.headline1,
-                ),
-              ],
-            ),
-          ),
-        ),
-      ],
-    );
-  }
 
   @override
   Widget build(BuildContext context) {
-    Size _size = MediaQuery.of(context).size;
-
     return Scaffold(
       body: Responsive(
-        desktop: _desktop(_size, image),
-        mobile: Container(
-          color: Colors.blue,
-        ),
-        tablet: Container(
-          color: Colors.yellow,
-        ),
+        desktop: Desktop(image: image),
+        mobile: Mobile(image: image),
+        tablet: Tablet(image: image),
       ),
     );
   }
