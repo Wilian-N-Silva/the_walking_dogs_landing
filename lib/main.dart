@@ -37,7 +37,6 @@ class _LandingState extends State<Landing> {
     Random().nextInt(100) < 50
         ? 'assets/images/blue/adopt_a_pet_bro.png'
         : 'assets/images/blue/animal_shelter_bro.png',
-    height: 500.0,
     fit: BoxFit.cover,
   );
 
@@ -46,8 +45,8 @@ class _LandingState extends State<Landing> {
     return Scaffold(
       body: Responsive(
         desktop: Desktop(image: image),
-        mobile: Mobile(image: image),
         tablet: Tablet(image: image),
+        mobile: Mobile(image: image),
       ),
     );
   }

@@ -12,6 +12,26 @@ class Mobile extends StatefulWidget {
 class _MobileState extends State<Mobile> {
   @override
   Widget build(BuildContext context) {
-    return Container();
+    return Column(
+      children: [
+        SizedBox(
+          height: MediaQuery.of(context).size.height,
+          width: MediaQuery.of(context).size.width,
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+            children: [
+              Text(
+                'The Walking Pets',
+                style: Theme.of(context).copyWith().textTheme.headline4,
+              ),
+              SizedBox(
+                width: MediaQuery.of(context).size.width,
+                child: widget.image,
+              )
+            ],
+          ),
+        )
+      ],
+    );
   }
 }
