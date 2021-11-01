@@ -32,7 +32,10 @@ class _DesktopState extends State<Desktop> {
                 'The Walking Pets',
                 style: Theme.of(context).textTheme.headline2,
               ),
-              widget.image
+              SizedBox(
+                width: MediaQuery.of(context).size.width / 3,
+                child: widget.image,
+              )
             ],
           ),
         ),
