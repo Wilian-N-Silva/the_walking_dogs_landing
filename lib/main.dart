@@ -20,6 +20,11 @@ class Application extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
         primarySwatch: Colors.blue,
+        textTheme: const TextTheme(
+          headline2: TextStyle(color: Colors.black),
+          headline4: TextStyle(color: Colors.black),
+          headline5: TextStyle(color: Colors.black),
+        ),
       ),
       home: const Landing(),
     );
@@ -33,6 +38,8 @@ class Landing extends StatefulWidget {
 }
 
 class _LandingState extends State<Landing> {
+  // TEXTS
+
   Image image = Image.asset(
     Random().nextInt(100) < 50
         ? 'assets/images/blue/adopt_a_pet_bro.png'
