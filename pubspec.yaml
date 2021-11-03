@@ -66,6 +66,12 @@ flutter:
   assets:
     - assets/images/blue/adopt_a_pet_bro.png
     - assets/images/blue/animal_shelter_bro.png
+    - assets/images/mockup1.png
+    - assets/images/mockup2.png
+    - assets/images/mockup3.png
+    - assets/images/mockup4.png
+    - assets/images/mockup5.png
+    - assets/images/demo.png
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware.

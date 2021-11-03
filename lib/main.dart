@@ -22,7 +22,7 @@ class Application extends StatelessWidget {
         primarySwatch: Colors.blue,
         textTheme: const TextTheme(
           headline2: TextStyle(color: Colors.black),
-          headline4: TextStyle(color: Colors.black),
+          headline4: TextStyle(),
           headline5: TextStyle(color: Colors.black),
         ),
       ),
@@ -50,6 +50,7 @@ class _LandingState extends State<Landing> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.white,
       body: Responsive(
         desktop: Desktop(image: image),
         tablet: Tablet(image: image),

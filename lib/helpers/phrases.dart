@@ -2,7 +2,7 @@ List<String> phrases = [
   'The Walking Pets',
   'Um jeito simples, dinâmico e fácil de encontrar um novo amigo animal',
   'Venha fazer parte desta comunidade!',
-  'Nós da The Walking Pets trazemos a inovação no ramo de adoção e cuidados de Pets. Aqui você pode encontrar seu novo amiguinho, graças ao nosso serviço de adoção, onde um usuário consegue cadastrar seus animais e os interessados em adotar podem entrar em contato direto pelo site.',
-  'Além disso, temos disponível um espaço para que empresas do ramo de PetShop, onde fica mais fácil e prático suprir as necessidades do seu pet.',
+  'No The Walking Pets, você pode encontrar seu novo amigo ou poderá fornecer Lar Temporário para pets que tenham necessidade!',
+  'Além disso, temos disponível um espaço para que empresas possam, de maneira prática e rápida, suprir as necessidades do seu pet.',
   'Nosso aplicativo está pronto para trazer mais comodidade para você e mais bem-estar para o seu pet!',
 ];
