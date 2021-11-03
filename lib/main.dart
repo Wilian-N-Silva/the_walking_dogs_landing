@@ -22,7 +22,7 @@ class Application extends StatelessWidget {
         primarySwatch: Colors.blue,
         textTheme: const TextTheme(
           headline2: TextStyle(color: Colors.black),
-          headline4: TextStyle(),
+          headline4: TextStyle(color: Colors.black),
           headline5: TextStyle(color: Colors.black),
         ),
       ),
@@ -44,7 +44,7 @@ class _LandingState extends State<Landing> {
     Random().nextInt(100) < 50
         ? 'assets/images/blue/adopt_a_pet_bro.png'
         : 'assets/images/blue/animal_shelter_bro.png',
-    fit: BoxFit.cover,
+    fit: BoxFit.fitHeight,
   );
 
   @override

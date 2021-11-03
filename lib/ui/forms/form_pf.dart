@@ -20,12 +20,36 @@ class _FormPFState extends State<FormPF> {
         customFormField(label: 'Nome Completo'),
         customFormField(label: 'Idade'),
         customFormField(label: 'Quantas pessoas moram com você?'),
-        customFormField(label: 'Área de atuação profissional?'),
+        DropdownButtonFormField(
+          value: selectedJobCategory,
+          isExpanded: true,
+          decoration: const InputDecoration(
+            border: OutlineInputBorder(),
+            labelText: 'Área de atuação profissional?',
+          ),
+          items: jobCategories.map<DropdownMenuItem<String>>((String value) {
+            return DropdownMenuItem<String>(
+              value: value,
+              child: Text(
+                value,
+                softWrap: true,
+                style: const TextStyle(
+                  overflow: TextOverflow.ellipsis,
+                ),
+              ),
+            );
+          }).toList(),
+          onChanged: (String? value) {
+            setState(() {
+              selectedJobCategory = value;
+            });
+          },
+        ),
         customFormField(label: 'Tem filhos?'),
         customFormField(label: 'Já adotou algum animal?'),
         DropdownButtonFormField(
           value: selectedOnTrip,
-          isDense: true,
+          isExpanded: true,
           decoration: const InputDecoration(
             border: OutlineInputBorder(),
             labelText: 'Durante viagens, onde deixará o animal?',
@@ -33,7 +57,12 @@ class _FormPFState extends State<FormPF> {
           items: onTrip.map<DropdownMenuItem<String>>((String value) {
             return DropdownMenuItem<String>(
               value: value,
-              child: Text(value),
+              child: Text(
+                value,
+                style: const TextStyle(
+                  overflow: TextOverflow.ellipsis,
+                ),
+              ),
             );
           }).toList(),
           onChanged: (String? value) {
@@ -45,21 +74,25 @@ class _FormPFState extends State<FormPF> {
         customFormField(label: 'Qual porte estaria interessado?'),
         DropdownButtonFormField(
           value: selectedAppUsage,
-          autovalidateMode: AutovalidateMode.onUserInteraction,
-          isDense: true,
+          isExpanded: true,
           decoration: const InputDecoration(
             border: OutlineInputBorder(),
-            labelText: 'Tipo de uso do aplicativo',
+            labelText: 'Funcionalidade de interesse?',
           ),
           items: appUsage.map<DropdownMenuItem<String>>((String value) {
             return DropdownMenuItem<String>(
               value: value,
-              child: Text(value),
+              child: Text(
+                value,
+                style: const TextStyle(
+                  overflow: TextOverflow.ellipsis,
+                ),
+              ),
             );
           }).toList(),
           onChanged: (String? value) {
             setState(() {
-              selectedAppUsage = value!;
+              selectedAppUsage = value;
             });
           },
         ),
